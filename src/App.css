@@ -1,0 +1,75 @@
+﻿/*
+  Quick tweak map:
+  - Brand text: .nav-brand
+  - Link text: .nav-links a
+  - Spacing: --nav-padding, --link-gap
+  - Font: --font-family
+  - Colors: --text-color, --bg-color
+*/
+/* Load a serif close to the reference screenshot */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Adjust overall typography and colors here */
+  --font-family: "Cormorant Garamond", "Times New Roman", Times, serif; /* swap to any font you like */
+  --text-color: #111; /* main text color */
+  --bg-color: #fff; /* background color for the bar */
+  --nav-padding: 28px 36px; /* top/bottom, left/right */
+  --link-gap: 28px; /* space between nav links */
+  --brand-letter-spacing: 2px; /* spacing for brand text */
+  --link-letter-spacing: 1.5px; /* spacing for nav links */
+  --link-font-size: 14px; /* size for nav links */
+  --brand-font-size: 20px; /* size for brand */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.page {
+  min-height: 100vh;
+}
+
+/* Nav container */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--nav-padding);
+  border-bottom: 1px solid #eee; /* subtle separator (remove if not needed) */
+}
+
+/* Brand / logo text */
+.nav-brand {
+  font-size: var(--brand-font-size);
+  letter-spacing: var(--brand-letter-spacing);
+  text-transform: uppercase; /* remove if you want lowercase */
+  font-weight: 400; /* change to 300/500 for lighter/heavier */
+}
+
+/* Links container */
+.nav-links {
+  display: flex;
+  gap: var(--link-gap);
+}
+
+/* Individual links */
+.nav-links a {
+  text-decoration: none; /* underline off */
+  color: var(--text-color);
+  font-size: var(--link-font-size);
+  letter-spacing: var(--link-letter-spacing);
+  text-transform: uppercase; /* remove for normal case */
+}
+
+/* Optional hover effect */
+.nav-links a:hover {
+  opacity: 0.7; /* adjust hover feel */
+}
